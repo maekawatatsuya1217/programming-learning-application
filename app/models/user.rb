@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
          with_options presence: true do
-            validates :name, presence: true
-            validates :profile, presence: true
+            validates :name
+            validates :profile
          end
 end
