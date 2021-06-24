@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
 
     before_action :authenticate_user!, only: [:new, :edit, :destroy]
     before_action :blog_build, only: [:show, :edit, :update]
+    before_action :unless, only: [:edit]
     def index
         @blogs = Blog.all
     end
@@ -20,6 +21,8 @@ class BlogsController < ApplicationController
     end
 
     def show
+        @comment = Comment.new
+        @comments = @blog.comments
     end
 
     def edit
@@ -47,6 +50,12 @@ class BlogsController < ApplicationController
 
     def blog_build
         @blog = Blog.find(params[:id])
+    end
+
+    def unless
+        unless user_signed_in? && current_user.id == @prototype.user.id
+         redirect_to prototypes_path
+        end 
     end
 
 end
