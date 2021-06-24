@@ -8,4 +8,6 @@ class User < ApplicationRecord
             validates :name
             validates :profile
          end
+
+         has_many :blogs
 end

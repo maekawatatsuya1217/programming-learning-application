@@ -28,15 +28,15 @@
 
 ##blogs
 
-+| Column  | Type       | Options  |
+| Column  | Type       | Options  |
 | ------- | ---------- | -------- |
 | title   | string     | NOT NULL |
 | catch   | string     | NOT NULL |
 | article | text       | NOT NULL |
 | user    | references |          |
 
-belongs_to :user
-has_many :comments
+- belongs_to :user
+- has_many :comments
 
 
 ##commentsテーブ
@@ -47,5 +47,5 @@ has_many :comments
 | user      | references |          |
 | prototype | references |          |
 
-belongs_to :user
-belongs_to :blog
+- belongs_to :user
+- belongs_to :blog

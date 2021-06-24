@@ -4,7 +4,7 @@
         <%= link_to "#{current_user.name}さん,今日も学習がんばりましょう！", class: :greeting__link %>
       <% end %>
     <div class="card__wrapper">
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+      <%= render partial: 'blog', collection: @blogs %>
     </div>
   </div>
 </main>
