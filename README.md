@@ -45,7 +45,7 @@
 | --------- | ---------- | -------- |
 | text      | text       | NOT NULL |
 | user      | references |          |
-| prototype | references |          |
+| blog      | references |          |
 
 - belongs_to :user
 - belongs_to :blog
