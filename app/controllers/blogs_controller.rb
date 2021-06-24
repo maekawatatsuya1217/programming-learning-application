@@ -53,8 +53,8 @@ class BlogsController < ApplicationController
     end
 
     def unless
-        unless user_signed_in? && current_user.id == @prototype.user.id
-         redirect_to prototypes_path
+        unless user_signed_in? && current_user.id == @blog.user.id
+         redirect_to blogs_path
         end 
     end
 
