@@ -89,6 +89,21 @@ a {
   background: #156fa7;
 }
 
+.nav__blog{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left: 20px;
+  font-size: 0.8em;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+}
+.nav__blog:hover{
+  color: #fff;
+  background: #156fa7;
+}
+
 .nav__calendar{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -302,16 +317,65 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-/* フッター */
 
-.footer {
-  background-color: #999;
-  padding: 10px 0;
+/* カレンダー */
+
+.calendar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.copyright {
-  text-align: center;
+
+.add__calendar{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left: 60px;
+  font-size: 0.8em;
+  color: black;
+  background-color: lightgrey;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+}
+.add__calendar:hover{
   color: #fff;
-  font-size: 10px;
+  background: #156fa7;
+}
+
+.edit__calendar{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left: 60px;
+  margin-bottom: 30px;
+  font-size: 0.8em;
+  color: black;
+  background-color: lightgrey;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+}
+.edit__calendar:hover{
+  color: #fff;
+  background: #156fa7;
+}
+
+.destroy__calendar{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left: 60px;
+  margin-bottom: 30px;
+  font-size: 0.8em;
+  color: black;
+  background-color: lightgrey;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+}
+.destroy__calendar:hover{
+  color: #fff;
+  background: #156fa7;
 }
 
 /* タブレット対応 */

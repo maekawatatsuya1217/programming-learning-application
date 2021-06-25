@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@event.user.name}さんの予定"%>
+      </h2>
+      <%= link_to "編集", edit_event_path(@event.id), class: :edit__calendar %>
+      <%= link_to "削除", event_path(@event.id), method: :delete, class: :destroy__calendar %>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">日時</th>
+            <td class="table__col2"><%= @event.start_time %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">タイトル</th>
+            <td class="table__col2"><%= @event.title %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">詳細情報</th>
+            <td class="table__col2"><%= @event.content %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
