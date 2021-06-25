@@ -19,6 +19,8 @@
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
+              <%= link_to "ニュース", root_path, class: :nav__news %>
+              <%= link_to "カレンダー", root_path, class: :nav__calendar %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "新規投稿", new_blog_path, class: :nav__btn %>
             </div>
@@ -33,7 +35,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright">Copyright © LEARNING APP All rights reserved.</p>
     </footer>
   </body>
 </html>
