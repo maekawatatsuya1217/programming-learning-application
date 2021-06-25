@@ -17,11 +17,12 @@
 
  ##calendars
 
-| Column  | Type       | Options                       |
-| ------- | ---------- | ----------------------------- |
-| content | string     |                               |
-| date    | datetime   | null: false                   |
-| user    | references | null: false, foreign_key: tru |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| title      | string     | null: false                    |
+| content    | text       | null: false                    |
+| start_time | datetime   | null: false                    |
+| user       | references | null: false, foreign_key: true |
 
 - belongs_to :user
 
