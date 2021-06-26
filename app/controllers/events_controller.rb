@@ -1,10 +1,10 @@
 class EventsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create, :destroy, :edit, :update]
+  before_action :authenticate_user!, only: [:index, :new, :create, :destroy, :edit, :update]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @events = Event.where(user_id: current_user.id)
   end
 
   def new
@@ -12,7 +12,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    event = Event.new(event_parameter)
+    event = Event.new(event_params)
     if event.save
       redirect_to events_path
     else
@@ -33,17 +33,17 @@ class EventsController < ApplicationController
   end
 
   def update
-    if @event.update(event_parameter)
-      redirect_to event_path(@event), notice: "編集しました"
+    if @event.update(event_params)
+      redirect_to event_path(@event)
     else
-      render 'edit'
+      render :edit
     end
   end
 
   private
 
-  def event_parameter
-    params.permit(:title, :content, :start_time).merge(user_id: current_user.id)
+  def event_params
+    params.permit(:title, :content, :start_time, :event).merge(user_id: current_user.id)
   end
 
   def set_event

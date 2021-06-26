@@ -1,17 +1,15 @@
 <div class="calendar">
    <%= link_to 'イベントを追加', new_event_path, class: :add__calendar %>
 </div>
-
 <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.start_time.strftime("%Y-%m-%d %H:%M") %></td>
-        <td><%= link_to 'Show', event_path(event.id) %></td>
-        <td><%= link_to 'Edit', edit_event_path(event.id) %></td>
-        <td><%= link_to 'Destroy',event_path(event.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <tr>
+    <td><%= event.title %></td>
+    <td><%= event.start_time.strftime("%Y-%m-%d %H:%M") %></td>
+    <td><%= link_to 'Show', event_path(event.id) %></td>
+    <td><%= link_to 'Edit', edit_event_path(event.id) %></td>
+    <td><%= link_to 'Destroy',event_path(event.id), method: :delete %></td> 
+  </tr>
 <% end %>
-
 <%= month_calendar events: @events do |date, events| %>
    <%= date.day %>
 <% events.each do |event| %>
