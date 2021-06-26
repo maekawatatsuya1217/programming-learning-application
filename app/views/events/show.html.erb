@@ -1,13 +1,14 @@
 <div class="main">
   <div class="inner">
-    <div class="user__wrapper">
+    <div class="show__wrapper">
       <h2 class="page-heading">
         <%= "#{@event.user.name}さんの予定"%>
       </h2>
       <%= link_to "編集", edit_event_path(@event.id), class: :edit__calendar %>
       <%= link_to "削除", event_path(@event.id), method: :delete, class: :destroy__calendar %>
+      <%= link_to "戻る", events_path, class: :return__calendar %>
       <table class="table">
-        <tbody>
+        <tbody class="show__table">
           <tr>
             <th class="table__col1">日時</th>
             <td class="table__col2"><%= l @event.start_time %></td>

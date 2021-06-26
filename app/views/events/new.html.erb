@@ -1,25 +1,28 @@
-<h1>入力フォーム</h1>
+<div class="form__wrapper">
+  <h1 class="page-heading">入力フォーム</h1>
+  <%= form_with(model: @event, local: true) do |form| %>
 
-<%= form_with(model: @event, local: true) do |form| %>
+    <div class="parent">
+      <%= form.label :タイトル %>
+      <%= form.text_field :title %>
+    </div>
 
-  <div class="title">
-    <%= form.label :タイトル %>
-    <%= form.text_field :title %>
-  </div>
+    <div class="parent">
+      <div class="child">
+        <%= form.label :日時 %>
+        <%= form.datetime_select :start_time %>
+      </div>
+    </div>
 
-    <div class="start_time">
-    <%= form.label :日時 %>
-    <%= form.datetime_select :start_time %>
-  </div>
-
-  <div class="content">
-    <%= form.label :詳細情報 %>
-    <%= form.text_field :content %>
-  </div>
+    <div class="parent">
+      <%= form.label :詳細情報 %>
+      <%= form.text_field :content %>
+    </div>
 
 
-  <div class="submit">
-    <%= form.submit %>
-  </div>
+    <div class="submit">
+      <%= form.submit %>
+    </div>
 
-<% end %>
+  <% end %>
+</div>

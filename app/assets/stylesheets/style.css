@@ -134,20 +134,34 @@ a {
 }
 
 /* フォーム周り */
+
 .form__wrapper{
-  min-height: calc(100vh - 161px);
+  max-width:600px;
+  margin:0 auto;
+  text-align:center;
+  border-radius:6px;
+  background-color:#FAFAFA;
 }
 
 .form__text {
-  width: 50%;
+  width: 400px;
+  height: 150px;
 }
 
 .field{
   margin: 10px 0;
+  overflow: scroll;
+  text-align: center;
+}
+
+input{
+  height: 30px;
+  width: 400px;
 }
 
 .actions{
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .form__btn{
@@ -167,6 +181,11 @@ a {
 .form__btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
 }
 
 /* メイン */
@@ -290,10 +309,15 @@ a {
 .user__wrapper{
   min-height: calc(100vh - 161px);
 }
+.show__header{
+  text-align: center;
+  margin-bottom: 40px;
+}
 .table{
   border-collapse: collapse;
   margin-bottom: 32px;
   width: 50%;
+  margin: 0 auto 30px;
 }
 .table__col1{
   text-align: left;
