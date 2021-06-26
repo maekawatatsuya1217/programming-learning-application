@@ -7,9 +7,9 @@
       <tr>
         <th class="table__col4"><%= event.title %></th>
         <td class="table__col5"><%= l event.start_time %></td>
-        <td class="table__col6"><%= link_to 'Show', event_path(event.id) %></td>
-        <td class="table__col6"><%= link_to 'Edit', edit_event_path(event.id) %></td>
-        <td class="table__col6"><%= link_to 'Destroy',event_path(event.id), method: :delete %></td> 
+        <td class="table__col6"><%= link_to '詳細', event_path(event.id) %></td>
+        <td class="table__col6"><%= link_to '編集', edit_event_path(event.id) %></td>
+        <td class="table__col6"><%= link_to '削除',event_path(event.id), method: :delete %></td> 
       </tr>
     </tbody>
   </table>
