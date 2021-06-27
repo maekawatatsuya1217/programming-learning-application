@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">ユーザー情報編集</h2>
+
+      <%= form_with model: current_user, local: true do |f| %>
+
+        <div class="field">
+          <%= f.label :name, "ユーザー名" %><br />
+          <%= f.text_field :name, id:"user_name" %>
+        </div>
+        <div class="field">
+          <%= f.label :email, "メールアドレス" %><br />
+          <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="field">
+          <%= f.label :profile, "プロフィール" %><br />
+          <%= f.text_area :profile, class: :form__text, id:"user_profile" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "ユーザー情報を更新", class: :form__btn  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

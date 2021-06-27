@@ -44,11 +44,37 @@ RSpec.describe User, type: :model do
        @user.valid?
        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")   
      end
-     it 'プロフィールが空では登録できない' do
+     it 'profileが空では登録できない' do
       @user.profile = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("Profile can't be blank")
      end
     end
- end
+  end
+
+
+    describe 'ユーザー情報編集' do
+      context 'ユーザー情報が編集できるとき' do
+       it '正しい情報が入力された時は編集できる' do
+         expect(@user).to be_valid
+       end
+      end
+      context 'ユーザー情報の編集がうまくいかないとき' do
+       it 'nameが空だと編集できない' do
+         @user.name = ''
+         @user.valid?
+         expect(@user.errors.full_messages).to include("Name can't be blank")
+       end
+       it 'emailが空では編集できない' do
+          @user.email = ''
+          @user.valid?
+          expect(@user.errors.full_messages).to include("Email can't be blank")
+       end
+       it 'profileが空では編集できない' do
+          @user.profile = ''
+          @user.valid?
+          expect(@user.errors.full_messages).to include("Profile can't be blank")
+       end
+      end
+    end
 end

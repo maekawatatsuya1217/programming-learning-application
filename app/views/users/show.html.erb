@@ -4,6 +4,11 @@
       <h2 class="show__header">
         <%= "#{@user.name}さんの情報"%>
       </h2>
+      <% if user_signed_in? && current_user.id == @user.id %>
+        <div class="user__edit__parent">
+          <%= link_to "編集", edit_user_path(@user.id), class: :user__edit__child %>
+        </div>
+      <% end %>
       <table class="table">
         <tbody>
           <tr>
@@ -16,7 +21,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 class="page-heading">
+      <h2 class="page-heading user__name">
         <%= "#{@user.name}さんの記事一覧"%>
       </h2>
       <div class="user__card">

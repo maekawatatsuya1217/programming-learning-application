@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
 
     before_action :authenticate_user!, only: [:new, :edit, :destroy]
     before_action :blog_build, only: [:show, :edit, :update]
-    before_action :unless, only: [:edit]
+    before_action :unless, only: :edit
     def index
         @blogs = Blog.all
     end

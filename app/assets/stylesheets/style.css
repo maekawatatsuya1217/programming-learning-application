@@ -319,6 +319,28 @@ input{
   width: 50%;
   margin: 0 auto 30px;
 }
+.user__edit__parent{
+  text-align: center;
+}
+.user__edit__child{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 0.8em;
+    color: black;
+    background-color: lightgrey;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 3px;
+  }
+  .user__edit__child:hover{
+    color: #fff;
+    background: #156fa7;
+  }
+  .user__name{
+    text-align: center;
+  }
 .table__col1{
   text-align: left;
   font-weight: bold;
