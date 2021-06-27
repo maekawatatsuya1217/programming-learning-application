@@ -9,10 +9,11 @@
     margin-bottom: 40px;
 }
 
-.add__calendar{
+.calendar__btn{
     display: inline-block;
     padding: 0.4em 1.6em;
     margin-left: 60px;
+    margin-bottom: 20px;
     font-size: 0.8em;
     color: black;
     background-color: lightgrey;
@@ -20,58 +21,7 @@
     user-select: none;
     border-radius: 3px;
   }
-  .add__calendar:hover{
-    color: #fff;
-    background: #156fa7;
-  }
-
-  .edit__calendar{
-    display: inline-block;
-    padding: 0.4em 1.6em;
-    margin-left: 60px;
-    margin-bottom: 30px;
-    font-size: 0.8em;
-    color: black;
-    background-color: lightgrey;
-    text-decoration: none;
-    user-select: none;
-    border-radius: 3px;
-  }
-  .edit__calendar:hover{
-    color: #fff;
-    background: #156fa7;
-  }
-
-  .destroy__calendar{
-    display: inline-block;
-    padding: 0.4em 1.6em;
-    margin-left: 60px;
-    margin-bottom: 30px;
-    font-size: 0.8em;
-    color: black;
-    background-color: lightgrey;
-    text-decoration: none;
-    user-select: none;
-    border-radius: 3px;
-  }
-  .destroy__calendar:hover{
-    color: #fff;
-    background: #156fa7;
-  }
-
-  .return__calendar{
-    display: inline-block;
-    padding: 0.4em 1.6em;
-    margin-left: 60px;
-    margin-bottom: 30px;
-    font-size: 0.8em;
-    color: black;
-    background-color: lightgrey;
-    text-decoration: none;
-    user-select: none;
-    border-radius: 3px;
-  }
-  .return__calendar:hover{
+  .calendar__btn:hover{
     color: #fff;
     background: #156fa7;
   }
