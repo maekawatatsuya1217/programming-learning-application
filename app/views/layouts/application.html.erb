@@ -22,8 +22,8 @@
               <%= link_to "ニュース", root_path, class: :nav__news %>
               <%= link_to "カレンダー", events_path, class: :nav__calendar %>
               <%= link_to "ブログ", root_path, class: :nav__blog %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "新規投稿", new_blog_path, class: :nav__btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
             </div>
           <% else %>
             <div class="nav__right">

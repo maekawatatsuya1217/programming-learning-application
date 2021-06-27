@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
             redirect_to "/blogs/#{@comment.blog.id}"
         else
             @blog = @comment.blog
-            @comments = @blog.comments
+            @comments = @blog.comments.includes(:user).order("created_at DESC")
             render 'blogs/show'
         end
     end

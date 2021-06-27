@@ -1,10 +1,10 @@
 class EventsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:index, :new, :create, :destroy, :edit, :update]
+  before_action :authenticate_user!
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.where(user_id: current_user.id)
+    @events = Event.where(user_id: current_user.id).includes(:user).order("created_at DESC")
   end
 
   def new

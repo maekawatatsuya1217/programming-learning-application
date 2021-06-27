@@ -1,10 +1,10 @@
 class BlogsController < ApplicationController
 
-    before_action :authenticate_user!, only: [:new, :edit, :destroy]
-    before_action :blog_build, only: [:show, :edit, :update]
-    before_action :unless, only: :edit
+    before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+    before_action :blog_build, only: [:show, :edit, :update, :destroy]
+    before_action :unless, only: [:edit, :update, :destroy]
     def index
-        @blogs = Blog.all
+        @blogs = Blog.includes(:user).with_attached_image.order('created_at DESC')
     end
 
     def new
@@ -22,7 +22,7 @@ class BlogsController < ApplicationController
 
     def show
         @comment = Comment.new
-        @comments = @blog.comments
+        @comments = @blog.comments.includes(:user)
     end
 
     def edit
