@@ -11,6 +11,12 @@ ja:
         catch: キャッチコピー
         article: 記事
         image: 画像
+      comment:
+        text: テキスト
+      event:
+        title: タイトル
+        content: 内容
+        start_time: 日時
       time:
         formats:
           default: "%Y/%m/%d %H:%M:%S"
