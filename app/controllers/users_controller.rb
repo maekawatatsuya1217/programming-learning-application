@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     before_action :unless, only: :edit
     
     def show
-        @blogs= @user.blogs.order.order("created_at DESC")
+        @blogs= @user.blogs.order("created_at DESC")
     end
     
     def edit

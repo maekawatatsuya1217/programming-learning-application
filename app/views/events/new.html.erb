@@ -2,6 +2,8 @@
   <h1 class="page-heading">入力フォーム</h1>
   <%= form_with(model: @event, local: true) do |form| %>
 
+  <%= render 'devise/shared/error_messages', model: form.object %>
+
     <div class="parent">
       <%= form.label :タイトル %>
       <%= form.text_field :title %>

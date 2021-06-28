@@ -12,11 +12,12 @@ class BlogsController < ApplicationController
     end
 
     def create
-        blog = Blog.new(blog_params)
-        if blog.save
-            redirect_to root_path
+        @blog = Blog.new(blog_params)
+        if @blog.valid?
+          @blog.save
+          redirect_to root_path
         else
-           render :new
+          render :new
         end
     end
 
