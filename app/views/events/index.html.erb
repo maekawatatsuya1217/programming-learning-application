@@ -4,7 +4,7 @@
 <% @events.each do |event| %>
   <table>
     <tbody>
-      <tr>
+      <tr class="calendar__table">
         <th class="table__col4"><%= event.title %></th>
         <td class="table__col5"><%= l event.start_time %></td>
         <td class="table__col6"><%= link_to '詳細', event_path(event.id) %></td>

@@ -391,31 +391,36 @@ input{
   background: rgb(6, 184, 255);
 }
 
+.calendar__table{
+  display: table;
+  margin-bottom: 30px;
+}
+
 .table__col4{
   font-size: 15px;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   background: #fafafa;
   border-collapse: collapse;
   border: 1px solid #f5f5f5;
-  width: 100px;
-  padding: 8px;
+  width: 300px;
+  padding: 5px;
 }
 .table__col5{
   font-size: 15px;
   text-align: left;
   border: 1px solid #f5f5f5;
   border-collapse: collapse;
-  width: 20%;
-  padding: 16px 8px;
+  width: 300px;
+  padding: 5px;
 }
 .table__col6{
   font-size: 15px;
   text-align: center;
   border: 1px solid #f5f5f5;
   border-collapse: collapse;
-  width: 10px;
-  padding: 16px 8px;
+  width: 50px;
+  padding: 5px;
 }
 
 .parent{
