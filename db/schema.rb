@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_25_054756) do
+ActiveRecord::Schema.define(version: 2021_06_29_233449) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -63,6 +63,17 @@ ActiveRecord::Schema.define(version: 2021_06_25_054756) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
+  create_table "forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "time", null: false
+    t.text "good", null: false
+    t.text "bad", null: false
+    t.text "improvement", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_forms_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -82,4 +93,5 @@ ActiveRecord::Schema.define(version: 2021_06_25_054756) do
   add_foreign_key "comments", "blogs"
   add_foreign_key "comments", "users"
   add_foreign_key "events", "users"
+  add_foreign_key "forms", "users"
 end
