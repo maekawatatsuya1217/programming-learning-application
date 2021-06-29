@@ -29,12 +29,12 @@
 
 ##blogs
 
-| Column  | Type       | Options  |
-| ------- | ---------- | -------- |
-| title   | string     | NOT NULL |
-| catch   | string     | NOT NULL |
-| article | text       | NOT NULL |
-| user    | references |          |
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| title   | string     | NOT NULL                       |
+| catch   | string     | NOT NULL                       |
+| article | text       | NOT NULL                       |
+| user    | references | null: false, foreign_key: true |
 
 - belongs_to :user
 - has_many :comments
@@ -50,3 +50,16 @@
 
 - belongs_to :user
 - belongs_to :blog
+
+
+##formテーブ
+
+| Column      | Type       | Options                        |
+| ---------   | ---------- | ------------------------------ |
+| time        | integer    | NOT NULL                       |
+| good        | text       | NOT NULL                       |
+| bad         | text       | NOT NULL                       |
+| improvement | text       | NOT NULL                       |
+| user        | references | null: false, foreign_key: true |
+
+- belongs_to :user
