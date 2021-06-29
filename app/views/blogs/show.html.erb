@@ -31,6 +31,7 @@
       <div class="blog__comments">
         <% if user_signed_in? %>
           <%= form_with model: [@blog, @comment],local: true do |f| %>
+          <%= render 'devise/shared/error_messages', model: f.object %>
             <div class="field">
                <%= f.label :text, "コメント" %><br />
                <%= f.text_field :text, id:"comment_text" %>

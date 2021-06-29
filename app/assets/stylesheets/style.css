@@ -288,6 +288,7 @@ input{
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
+  text-align: center;
 }
 
 .comments_lists{
@@ -433,7 +434,6 @@ input{
 .show__wrapper{
   text-align: center;
 }
-
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
