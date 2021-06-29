@@ -18,13 +18,13 @@
         <div class="blog__detail">
           <p class="detail__title">キャッチコピー</p>
           <p class="detail__message">
-            <%= @blog.catch %>
+            <%= safe_join(@blog.catch.split("\n"),tag(:br)) %>
           </p>
         </div>
         <div class="blog__detail">
           <p class="detail__title">記事</p>
           <p class="detail__message">
-            <%= @blog.article %>
+            <%= safe_join(@blog.article.split("\n"),tag(:br)) %>
           </p>
         </div>
       </div>
