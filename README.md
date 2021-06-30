@@ -12,6 +12,7 @@
  - has_many :calendars
  - has_many :blogs
  - has_many :comments
+ - has_many :forms
 
 
 
