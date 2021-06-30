@@ -11,23 +11,23 @@ RSpec.describe Blog, type: :model do
        expect(@blog).to be_valid
      end
     end
-    context '新規投稿がうまくいかないとき' do
+    context '新規投稿ができないとき' do
       it 'titleが空だと投稿できない' do
         @blog.title = ''
         @blog.valid?
         expect(@blog.errors.full_messages).to include('タイトルを入力してください')
       end
-      it 'catchが体と投稿できない' do
+      it 'catchが空だと投稿できない' do
         @blog.catch = ''
         @blog.valid?
         expect(@blog.errors.full_messages).to include('キャッチコピーを入力してください')
       end
-      it 'articleが空だと登校できない' do
+      it 'articleが空だと投稿できない' do
         @blog.article = ''
         @blog.valid?
         expect(@blog.errors.full_messages).to include('記事を入力してください')
       end
-      it 'imageが空だと登校できない' do
+      it 'imageが空だと投稿できない' do
         @blog.image = nil
         @blog.valid?
         expect(@blog.errors.full_messages).to include('画像を入力してください')
