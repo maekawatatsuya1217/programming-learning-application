@@ -1,10 +1,14 @@
 class FormsController < ApplicationController
     def index
-        @forms = Form.all
+        @forms = Form.includes(:user).with_attached_image.order('created_at DESC')
     end
 
     def new
         @form = Form.new
+    end
+
+    def show
+        @form = Form.find(params[:id])
     end
 
     def create

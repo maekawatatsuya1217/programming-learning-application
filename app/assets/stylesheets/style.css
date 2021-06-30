@@ -195,11 +195,13 @@ input{
 }
 .greeting__link{
   text-decoration: underline;
+  margin-bottom: 40px;
 }
 .form_submission{
   display: inline-block;
   padding: 0.4em 1.6em;
   margin-left: 50px;
+  margin-bottom: 40px;
   font-size: 0.8em;
   color: white;
   background-color: rgb(6, 184, 255);
