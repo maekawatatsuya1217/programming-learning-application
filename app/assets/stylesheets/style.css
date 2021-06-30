@@ -196,6 +196,17 @@ input{
 .greeting__link{
   text-decoration: underline;
 }
+.form_submission{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left: 50px;
+  font-size: 0.8em;
+  color: white;
+  background-color: rgb(6, 184, 255);
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+}
 .page-heading {
   font-size: 30px;
   margin-bottom: 28px;

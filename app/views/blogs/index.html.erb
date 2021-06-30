@@ -2,6 +2,7 @@
   <div class="inner">
       <% if user_signed_in? %>
         <%= link_to "#{current_user.name}さん,今日も学習がんばりましょう！", user_path(current_user.id), class: :greeting__link %>
+        <%= link_to "新規投稿", new_blog_path, class: :form_submission %>
       <% end %>
     <div class="card__wrapper">
       <%= render partial: 'blog', collection: @blogs %>

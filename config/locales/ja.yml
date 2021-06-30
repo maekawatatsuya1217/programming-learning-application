@@ -11,6 +11,13 @@ ja:
         catch: キャッチコピー
         article: 記事
         image: 画像
+      form:
+        day: 学習日
+        time: 学習時間
+        good: 良かったところ
+        bad: 上手くいかなかった点
+        improvement: 明日からの改善案
+        image: 画像
       comment:
         text: テキスト
       event:
