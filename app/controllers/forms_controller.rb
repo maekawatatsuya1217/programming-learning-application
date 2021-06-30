@@ -1,6 +1,6 @@
 class FormsController < ApplicationController
 
-    before_action :authenticate_user!, only: [:new, :create, :edit]
+    before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
     before_action :form_build, only: [:show, :edit, :update, :destroy]
     before_action :unless, only: [:edit, :update, :destroy]
     def index

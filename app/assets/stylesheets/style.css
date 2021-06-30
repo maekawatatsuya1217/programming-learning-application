@@ -298,7 +298,7 @@ input{
 }
 .blog__btn:hover{
   color: #fff;
-  background: #999;
+  background: rgb(6, 184, 255);
 }
 
 .blog__comments{
