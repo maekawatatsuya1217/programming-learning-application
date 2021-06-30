@@ -4,7 +4,7 @@ class FormsController < ApplicationController
     before_action :form_build, only: [:show, :edit, :update, :destroy]
     before_action :unless, only: [:edit, :update, :destroy]
     def index
-        @forms = Form.includes(:user).with_attached_image.order('created_at DESC')
+        @forms = Form.where(user_id: current_user.id).includes(:user).with_attached_image.order('created_at DESC')
     end
 
     def new
