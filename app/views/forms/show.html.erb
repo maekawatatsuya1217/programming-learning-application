@@ -8,7 +8,7 @@
       <% if user_signed_in? && current_user.id == @form.user_id %>
         <div class="blog__manage">
           <%= link_to "編集する", edit_form_path(@form), class: :blog__btn %>
-          <%= link_to "削除する", blog_path(@form), method: :delete, class: :blog__btn %>
+          <%= link_to "削除する", form_path(@form), method: :delete, class: :blog__btn %>
         </div>
       <% end %>
       <div class="blog__image">

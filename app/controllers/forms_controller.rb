@@ -1,8 +1,8 @@
 class FormsController < ApplicationController
 
     before_action :authenticate_user!, only: [:new, :create, :edit]
-    before_action :form_build, only: [:show, :edit, :update]
-    before_action :unless, only: [:edit, :update]
+    before_action :form_build, only: [:show, :edit, :update, :destroy]
+    before_action :unless, only: [:edit, :update, :destroy]
     def index
         @forms = Form.includes(:user).with_attached_image.order('created_at DESC')
     end
@@ -33,6 +33,12 @@ class FormsController < ApplicationController
         else
             render :edit
         end
+    end
+
+    def destroy
+        form = Form.find(params[:id])
+        form.destroy
+        redirect_to forms_path
     end
 
     private
