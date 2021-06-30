@@ -1,0 +1,51 @@
+<main class="main">
+  <div class="inner">
+    <div class="blog__wrapper">
+      <p class="blog__hedding">
+        <%= @form.day %>
+      </p>
+      <%= link_to @form.user.name, user_path(@form.user.id), class: :blog__user %>
+      <% if user_signed_in? && current_user.id == @form.user_id %>
+        <div class="blog__manage">
+          <%= link_to "編集する", edit_form_path(@form), class: :blog__btn %>
+          <%= link_to "削除する", form_path(@form), method: :delete, class: :blog__btn %>
+        </div>
+      <% end %>
+      <div class="blog__image">
+        <%= image_tag @form.image %>
+      </div>
+      <div class="blog__body">
+        <div class="blog__detail">
+          <p class="detail__title">学習日</p>
+          <p class="detail__message">
+            <%= safe_join(@form.day.split("\n"),tag(:br)) %>
+          </p>
+        </div>
+        <div class="blog__detail">
+          <p class="detail__title">学習時間</p>
+          <p class="detail__message">
+            <%= safe_join(@form.time.split("\n"),tag(:br)) %>
+          </p>
+        </div>
+        <div class="blog__detail">
+          <p class="detail__title">良かったところ</p>
+          <p class="detail__message">
+            <%= safe_join(@form.good.split("\n"),tag(:br)) %>
+          </p>
+        </div>
+        <div class="blog__detail">
+          <p class="detail__title">上手くいかなかった点</p>
+          <p class="detail__message">
+            <%= safe_join(@form.bad.split("\n"),tag(:br)) %>
+          </p>
+        </div>
+        <div class="blog__detail">
+          <p class="detail__title">明日からの完全案</p>
+          <p class="detail__message">
+            <%= safe_join(@form.improvement.split("\n"),tag(:br)) %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -195,6 +195,19 @@ input{
 }
 .greeting__link{
   text-decoration: underline;
+  margin-bottom: 40px;
+}
+.form_submission{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  font-size: 0.8em;
+  color: white;
+  background-color: rgb(6, 184, 255);
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
 }
 .page-heading {
   font-size: 30px;
@@ -285,7 +298,7 @@ input{
 }
 .blog__btn:hover{
   color: #fff;
-  background: #999;
+  background: rgb(6, 184, 255);
 }
 
 .blog__comments{

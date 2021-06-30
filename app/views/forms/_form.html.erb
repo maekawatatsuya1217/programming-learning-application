@@ -1,0 +1,38 @@
+<%= form_with model: @form, local: true do |f|%>
+
+<%= render 'devise/shared/error_messages', model: f.object %>
+
+  <div class="field">
+    <%= f.label :day, "学習日(例) 3/5(水)" %><br />
+    <%= f.text_field :day, id:"form_time" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time, "学習時間(例)8:00" %><br />
+    <%= f.text_field :time, id:"form_time" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :good, "良かったところ" %><br />
+    <%= f.text_area :good, class: :form__text, id:"form_good" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bad, "上手くいかなかった点" %><br />
+    <%= f.text_area :bad, class: :form__text, id:"form_bad", size: "10x30" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :improvement, "明日からの改善案" %><br />
+    <%= f.text_area :improvement, class: :form__text, id:"form_improvement", size: "10x30" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "フォームの画像" %><br />
+    <%= f.file_field :image, id:"blog_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

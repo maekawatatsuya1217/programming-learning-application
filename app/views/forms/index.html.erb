@@ -1,9 +1,11 @@
 <main class="main">
   <div class="inner">
       <% if user_signed_in? %>
-        <%= link_to "#{current_user.name}さん,今日も学習がんばりましょう！", user_path(current_user.id), class: :greeting__link %>
+        <%= link_to "#{current_user.name}さん学習お疲れ様でした！", user_path(current_user.id), class: :greeting__link %>
+        <%= link_to "振り返りフォーム提出", new_form_path, class: :form_submission %>
       <% end %>
     <div class="card__wrapper">
+    <%= render partial: 'forms', collection: @forms %>
     </div>
   </div>
 </main>
