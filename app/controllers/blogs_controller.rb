@@ -43,6 +43,10 @@ class BlogsController < ApplicationController
         redirect_to root_path
     end
 
+    def search
+        @blogs = Blog.search(params[:keyword])
+    end
+
     private
 
     def blog_params
