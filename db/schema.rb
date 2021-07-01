@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 2021_06_29_233449) do
   end
 
   create_table "forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "day", null: false
-    t.string "time", null: false
+    t.date "day", null: false
+    t.time "time", null: false
     t.text "good", null: false
     t.text "bad", null: false
     t.text "improvement", null: false
