@@ -57,7 +57,7 @@
 
 | Column      | Type       | Options                        |
 | ---------   | ---------- | ------------------------------ |
-| day         | string     | NOT NULL                       |
+| day         | date       | NOT NULL                       |
 | time        | string     | NOT NULL                       |
 | good        | text       | NOT NULL                       |
 | bad         | text       | NOT NULL                       |
