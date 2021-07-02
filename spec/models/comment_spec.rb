@@ -4,6 +4,7 @@ RSpec.describe Comment, type: :model do
   before do
     @comment = FactoryBot.build(:comment)
   end
+  
   describe 'コメント投稿' do
     context 'コメント投稿ができる時' do
      it '正しい情報が入力された時は投稿できる' do
