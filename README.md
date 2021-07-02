@@ -1,5 +1,6 @@
 # テーブル設計
 
+
 ##user
 
 | Column     | Type   | Options  |
@@ -13,7 +14,6 @@
  - has_many :blogs
  - has_many :comments
  - has_many :forms
-
 
 
  ##calendars
@@ -58,7 +58,7 @@
 | Column      | Type       | Options                        |
 | ---------   | ---------- | ------------------------------ |
 | day         | date       | NOT NULL                       |
-| time        | string     | NOT NULL                       |
+| time        | time       | NOT NULL                       |
 | good        | text       | NOT NULL                       |
 | bad         | text       | NOT NULL                       |
 | improvement | text       | NOT NULL                       |
