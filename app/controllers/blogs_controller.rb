@@ -3,6 +3,7 @@ class BlogsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
     before_action :blog_build, only: [:show, :edit, :update, :destroy]
     before_action :unless, only: [:edit, :update, :destroy]
+    
     def index
         @blogs = Blog.includes(:user).with_attached_image.order('created_at DESC')
     end
