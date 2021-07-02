@@ -1,19 +1,24 @@
 <main class="main">
   <div class="inner">
     <div class="blog__wrapper">
+
       <p class="blog__hedding">
         <%= @blog.title %>
       </p>
+
       <%= link_to @blog.user.name, user_path(@blog.user.id), class: :blog__user %>
+
       <% if user_signed_in? && current_user.id == @blog.user_id %>
         <div class="blog__manage">
           <%= link_to "編集する", edit_blog_path(@blog), class: :blog__btn %>
           <%= link_to "削除する", blog_path(@blog), method: :delete, class: :blog__btn %>
         </div>
       <% end %>
+      
       <div class="blog__image">
         <%= image_tag @blog.image %>
       </div>
+
       <div class="blog__body">
         <div class="blog__detail">
           <p class="detail__title">キャッチコピー</p>
@@ -21,14 +26,17 @@
             <%= safe_join(@blog.catch.split("\n"),tag(:br)) %>
           </p>
         </div>
+
         <div class="blog__detail">
           <p class="detail__title">記事</p>
           <p class="detail__message">
             <%= safe_join(@blog.article.split("\n"),tag(:br)) %>
           </p>
         </div>
+
       </div>
       <div class="blog__comments">
+
         <% if user_signed_in? %>
           <%= form_with model: [@blog, @comment],local: true do |f| %>
           <%= render 'devise/shared/error_messages', model: f.object %>
@@ -41,6 +49,7 @@
             </div>
           <% end %>
         <% end %> 
+
         <ul class="comments_lists">
             <li class="comments_list">
               <% @comments.each do |comment| %>
@@ -51,6 +60,7 @@
               <% end %>
             </li>
         </ul>
+        
       </div>
     </div>
   </div>

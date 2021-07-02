@@ -4,6 +4,7 @@ RSpec.describe Event, type: :model do
   before do
     @event = FactoryBot.build(:event)
   end
+  
   describe 'イベント追加' do
     context 'イベント追加ができる時' do
      it '正しい情報が入力された時は追加できる' do

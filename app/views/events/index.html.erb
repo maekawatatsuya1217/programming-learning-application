@@ -1,6 +1,7 @@
 <div class="calendar">
    <%= link_to 'イベントを追加', new_event_path, class: :calendar__btn %>
 </div>
+
 <% @events.each do |event| %>
   <table>
     <tbody>
@@ -14,6 +15,7 @@
     </tbody>
   </table>
 <% end %>
+
 <%= month_calendar events: @events do |date, events| %>
    <%= date.day %>
 <% events.each do |event| %>
