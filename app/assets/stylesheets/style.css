@@ -270,6 +270,9 @@ input{
   margin-bottom: 40px;
 }
 .card__img {
+  object-fit: cover;
+  height: 200px;
+  width: 300px;
   margin-bottom: 16px;
 }
 .card__title {
