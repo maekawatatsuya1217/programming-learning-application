@@ -35,7 +35,7 @@
         </div>
 
       </div>
-      <div class="blog__comments">
+      <div class="blog__comments" id="blog" value=<%= @blog.id %>>
 
         <% if user_signed_in? %>
           <%= form_with model: [@blog, @comment],local: true, id: "form" do |f| %>
@@ -50,8 +50,11 @@
           <% end %>
         <% end %> 
 
-        <ul class="comments_lists">
-            <li class="comments_list">
+        <div id="list">
+        </div>
+
+        <ul class="comments_lists" >
+            <li class="comments_list"> 
               <% @comments.each do |comment| %>
               <p>
               <%= link_to comment.user.name, "/users/#{comment.user_id}", class: :comment_user %>
