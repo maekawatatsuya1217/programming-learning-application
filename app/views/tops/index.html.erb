@@ -31,28 +31,56 @@
     <%# メイン %>
     <main>
     <div class="area_top_view">
-      <img src="assets/images/top.png" alt="トップ画像">
+      <%= image_tag("top.png") %>
+      <%# <img src="/assets/images/top.png" alt="トップ画像"> %>
       <p class="ttl">learning app</p>
     </div>
     <%# アプリの説明 %>
       <section class="area_home_about">
         <div class="container">
           <div class="head_home">
-            <h2 class="mini_title">learning appとは？</h2>
+            <h2 class="ttl">learning appとは？</h2>
           </div>
-          <div class="head_home">
-          コンテンツ
+          <div class="body_home">
+            <div class="layout_2_div">
+              <div class="img">
+                <%= image_tag("macbook.png") %>
+              </div>
+              <div class="text_home">
+              <p class="ttl">learning appとは？</p>
+              <p class="description">駆け出しエンジニア向けの,<br>ブログ、振り返りフォーム、カレンダーなどを兼ね備えた<br>プログラミング学習アプリです。</p>
+              <div class="btnarea">
+                <a href="" class="btn_ico_blog">アプリへ移動</a>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <%# アプリの機能一覧 %>
       <section class="area_home_content">
         <div class="container">
-          <div class="head_home">
+          <div class="body_home">
             <h2 class="ttl">機能一覧</h2>
           </div>
           <div class="head_home">
-          コンテンツ
+            <ul class="list_feature">
+              <li>
+                <%= image_tag("blog.png") %>
+                <p class="ttl">ブログ</p>
+                <p class="description"></p>
+              </li>
+              <li>
+                <%= image_tag("form.png") %>
+                <p class="ttl">フォーム</p>
+                <p class="description"></p>
+              </li>
+              <li>
+                <%= image_tag("calendar.png") %>
+                <p class="ttl">カレンダー</p>
+                <p class="description"></p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -60,10 +88,18 @@
       <section class="area_home_background">
         <div class="container">
           <div class="head_home">
-            <h2 class="mini_title">アプリ作成の経緯と対象者</h2>
+            <h2 class="ttl">アプリ作成の経緯と対象者</h2>
           </div>
-          <div class="head_home">
-          コンテンツ
+          <div class="body_home">
+            <div class="layout_2_div">
+              <div class="img">
+                <%= image_tag("macbook.png") %>
+              </div>
+              <div class="text_home">
+              <p class="ttl">アプリ作成の経緯と対象者</p>
+              <p class="description">駆け出しエンジニアにプログラミング学習を効率よく行うための環境を提供するという目的で作成されたアプリです。</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
