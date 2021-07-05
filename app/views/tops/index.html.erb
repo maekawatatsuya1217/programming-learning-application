@@ -17,12 +17,20 @@
         <div class="area_logo_header">
           <%= link_to image_tag("head.png", class: :top_logo), root_path %>
         </div>
+        <% if user_signed_in? %>
         <nav class="nav_header">
           <ul class="list_nav_header">
-            <li><a  href="">ログイン</a></li>
-            <li><a  href="">新規登録</a></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           </ul>
         </nav>
+        <% else %>
+        <nav class="nav_header">
+          <ul class="list_nav_header">
+            <li><%= link_to "ログイン", new_user_session_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
+          </ul>
+        </nav>
+        <% end %>
       </div>
     </header>
     <%# メイン %>
