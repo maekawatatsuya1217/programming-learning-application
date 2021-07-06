@@ -1,0 +1,208 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// 基本要素
+
+.container {
+    margin: 0 auto;
+}
+
+
+// 画像
+
+.img{
+    height: 150px;
+    width: 500px;
+    margin-right: 200px;
+}
+
+
+// ヘッダー
+
+.top_header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top_header > .container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: none;
+    padding: 0 60px;
+}
+
+
+// ロゴ
+
+.area_logo_header .top_logo{
+    display: block;
+}
+
+.area_logo_header img{
+    height: 60px;
+    vertical-align: bottom;
+}
+
+// ヘッダーナビ
+
+.nav_header{
+    margin: 0 0 0 500px;
+}
+
+.top_page_nav{
+    color: white;
+}
+
+.list_nav_header{
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.list_nav_header > li{
+    padding: 0 20px;
+    color: white;
+}
+
+.list_nav_header > li:hover{
+    color: #fff;
+    background: rgb(6, 184, 255);
+    border-radius: 3px;
+}
+
+
+// トップビュー
+
+.area_top_view{
+    background: url(../images/top.png) no-repeat bottom center;
+    background-size: cover;
+}
+
+.area_top_view > .container{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// エリア＿ホーム
+
+[class*="area_home"] {
+    padding: 100px 0 50px;
+}
+
+
+// ヘッド
+
+.head_home{
+    display: flex;
+    justify-content: center;
+}
+
+.head_home .ttl{
+    font-size: 40px;
+    padding: 0 0 12px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.head_home .ttl:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #0cf;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+
+//   2分割のレイアウト
+
+.ttl_top{
+    margin: 150px 0 20px 0;
+    font-size: 40px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.ttl_top:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #0cf;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+.layout_2_div{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 50px 100px;
+}
+
+.layout_2_div > div{
+    width: 40%;
+}
+
+
+// テキスト＿ホーム
+
+.text_home .ttl {
+    font-size: 37px;
+    margin: 20px 0 20px;
+}
+
+.text_home .description{
+    width: 500px;
+    font-size: 25px;
+    margin-top: 50px;
+    line-height: 45px;
+}
+
+
+// バックグラウンド
+
+.bg_black{
+    color: white;
+    background-color: black;
+}
+
+
+// 機能一覧
+
+.list_feature{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list_feature > li{
+    width: 33.33333%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.list_feature  .ttl{
+    width: 130px;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+.list_feature .description{
+    line-height: 30px;
+}

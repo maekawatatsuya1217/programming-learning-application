@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!, only: [:edit, :edit]
-    before_action :set_user, only: [:show, :edit]
+    before_action :set_user, only: [:show, :edit, :update]
     before_action :unless, only: :edit
     
     def show
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
     def update
         if current_user.update(user_params)
-            redirect_to root_path
+            redirect_to user_path(@user)
         else
             render :edit
         end

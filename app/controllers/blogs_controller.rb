@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
         @blog = Blog.new(blog_params)
         if @blog.valid?
           @blog.save
-          redirect_to root_path
+          redirect_to blogs_path
         else
           render :new
         end
@@ -41,7 +41,7 @@ class BlogsController < ApplicationController
     def destroy
         blog = Blog.find(params[:id])
         blog.destroy
-        redirect_to root_path
+        redirect_to blogs_path
     end
 
     def search
