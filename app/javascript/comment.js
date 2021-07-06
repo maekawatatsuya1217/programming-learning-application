@@ -2,8 +2,10 @@ const buildHTML = (XHR) => {
   const comment = XHR.response.comment;
   const user = XHR.response.user;
   const html = `
+        <p>
         <a href="/users/${comment.user_id}">${user.name}</a>
-        ${comment.text}`;
+        ${comment.text}
+        </p>`;
   return html;
 };
 
