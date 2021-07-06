@@ -356,6 +356,9 @@ input{
   background: rgb(6, 184, 255);
 }
 
+
+/* コメント */
+
 .blog__comments{
   background-color: #f6f6f6;
   padding: 20px;
