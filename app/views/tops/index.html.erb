@@ -20,14 +20,20 @@
         <% if user_signed_in? %>
         <nav class="nav_header">
           <ul class="list_nav_header">
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "フォーム", forms_path, class: :top_page_nav %></li>
+            <li><%= link_to "カレンダー", events_path, class: :top_page_nav %></li>
+            <li><%= link_to "ブログ", blogs_path, class: :top_page_nav %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :top_page_nav %></li>
           </ul>
         </nav>
         <% else %>
         <nav class="nav_header">
           <ul class="list_nav_header">
-            <li><%= link_to "ログイン", new_user_session_path %></li>
-            <li><%= link_to "新規登録", new_user_registration_path %></li>
+            <li><%= link_to "フォーム", forms_path, class: :top_page_nav %></li>
+            <li><%= link_to "カレンダー", events_path, class: :top_page_nav %></li>
+            <li><%= link_to "ブログ", blogs_path, class: :top_page_nav %></li>
+            <li><%= link_to "ログイン", new_user_session_path, class: :top_page_nav %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class: :top_page_nav %></li>
           </ul>
         </nav>
         <% end %>
