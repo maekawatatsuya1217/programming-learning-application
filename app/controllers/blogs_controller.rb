@@ -45,7 +45,7 @@ class BlogsController < ApplicationController
     end
 
     def search
-        @blogs = Blog.search(params[:keyword])
+        @blogs = Blog.search(params[:keyword]).includes(:user).with_attached_image.order('created_at DESC')
     end
 
     private
