@@ -185,11 +185,10 @@
 .list_feature{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -20px;
 }
 
 .list_feature > li{
-    width: 33%;
+    width: 33.33333%;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -198,7 +197,7 @@
 }
 
 .list_feature  .ttl{
-    width: 600px;
+    width: 130px;
     font-size: 25px;
     text-align: center;
     margin: 0 0 30px;
