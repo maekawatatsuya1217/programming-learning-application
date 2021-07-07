@@ -3,3 +3,8 @@
 
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
+
+window.onload = function() {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+}
