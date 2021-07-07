@@ -24,7 +24,7 @@
               <%= link_to "カレンダー", events_path, class: :nav__calendar %>
               <%= link_to "ブログ", blogs_path, class: :nav__blog %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to current_user.name, root_path, class: :login_user_name %>
+              <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
               <i class="fas fa-user fa-fw"></i>
             </div>
           <% else %>
