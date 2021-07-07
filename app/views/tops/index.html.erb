@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>purogramming-learning-application</title>
     <%= csrf_meta_tags %>
@@ -25,6 +26,7 @@
             <li><%= link_to "ブログ", blogs_path, class: :top_page_nav %></li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :top_page_nav %></li>
             <%= link_to current_user.name, root_path, class: :login_user_name %>
+            <i class="fas fa-user fa-fw"></i>
           </ul>
         </nav>
         <% else %>

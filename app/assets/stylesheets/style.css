@@ -65,6 +65,10 @@ a {
   margin-left: 150px;
 }
 
+.fa-user{
+  color: rgb(6, 184, 255);
+}
+
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
