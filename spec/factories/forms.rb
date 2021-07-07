@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :form do
-    day         {'1/1(日)'}
+    day         {'2021-1-1'}
     time        {'1:00'}
     good        {'集中できたこと'}
     bad         {'集中できなかったこと'}
