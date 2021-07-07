@@ -243,7 +243,7 @@ input{
 
 .search-form .search-input {
   width: 150px;
-  margin: 0 10px 0 100px;
+  margin-left: 100px;
 }
 .search-form .search-btn {
   width: 50px;
