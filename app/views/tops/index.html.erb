@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>purogramming-learning-application</title>
     <%= csrf_meta_tags %>
@@ -24,6 +25,8 @@
             <li><%= link_to "カレンダー", events_path, class: :top_page_nav %></li>
             <li><%= link_to "ブログ", blogs_path, class: :top_page_nav %></li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :top_page_nav %></li>
+            <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
+            <i class="fas fa-user fa-fw"></i>
           </ul>
         </nav>
         <% else %>
@@ -38,6 +41,10 @@
         </nav>
         <% end %>
       </div>
+    </div>
+    <%# ローディング %>
+    <div id="loading">
+      <div class="spinner"></div>
     </div>
     <%# メイン %>
     <main>
@@ -59,7 +66,7 @@
               </div>
               <div class="text_home">
               <p class="ttl">learning appとは？</p>
-              <p class="description">駆け出しエンジニアに向けた,<br>ブログ、振り返りフォーム、カレンダーなどを導入したプログラミング学習アプリです。</p>
+              <p class="description">駆け出しエンジニアに向けた,<br>ブログ、振り返りフォーム、カレンダー機能を導入したプログラミング学習アプリです。</p>
               <div class="btnarea">
               </div>
               </div>
@@ -77,17 +84,17 @@
             <ul class="list_feature">
               <li>
                 <%= image_tag 'blog.png', size: '120x120' %>
-                <p class="ttl"><%= link_to "ブログ", blogs_path, class: :top_page_nav %></p>
-                <p class="description">毎日の学習で身につけた技術やエラーの解消方法を<br>隙間時間にブログの記事にまとめ公開することによ<br>ってアウトプットできます。</p>
+                <p class="ttl"><%= link_to "ブログ", blogs_path, class: :function_list %></p>
+                <p class="description">毎日の学習で身につけた技術やエラーの解消方法を<br>隙間時間にブログの記事にまとめ公開することによ<br>ってアウトプットを積極的に行う事ができます。</p>
               </li>
               <li>
                 <%= image_tag 'form.png', size: '120x120' %>
-                <p class="ttl"><%= link_to "フォーム", forms_path, class: :top_page_nav %></p>
-                <p class="description">毎日の学習で良かった点や明日から改善したい点を<br>言語化します。フォームの記述をすることでより良<br>い学習方法を考える機会を提供します。</p>
+                <p class="ttl"><%= link_to "フォーム", forms_path, class: :function_list %></p>
+                <p class="description">毎日の学習を通して良かった点や明日から改善した<br>い点を言語化します。フォームの記述をすることで<br>より良い学習方法を考える機会を提供します。</p>
               </li>
               <li>
                 <%= image_tag 'calendar.png' , size: '120x120' %>
-                <p class="ttl"><%= link_to "カレンダー", events_path, class: :top_page_nav %></p>
+                <p class="ttl"><%= link_to "カレンダー", events_path, class: :function_list %></p>
                 <p class="description">毎日の学習の予定をカレンダーにまとめ、エンジニ<br>アに必要な自己管理能力の向上を目指します。スケ<br>ジュール管理を習慣にすることができます。</p>
               </li>
             </ul>
@@ -98,7 +105,7 @@
       <section class="area_home_background">
         <div class="container">
           <div class="head_home">
-            <h2 class="ttl">アプリ作成の経緯と対象者</h2>
+            <h2 class="ttl">アプリ作成の目的</h2>
           </div>
           <div class="body_home">
             <div class="layout_2_div">
@@ -106,8 +113,27 @@
                 <%= image_tag("pc.png") %>
               </div>
               <div class="text_home">
-              <p class="ttl">アプリを作成した理由</p>
-              <p class="description">駆け出しエンジニアにプログラミング学習を効率よく行うための環境を提供する目的で作成されたアプリです。</p>
+              <p class="ttl">アプリを作成した目的</p>
+              <p class="description">駆け出しエンジニアにプログラミング学習を効率よく行うための環境を提供する目的で、作成されたアプリケーションです。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <%# エンジニアを目指すあなたへ %>
+      <section class="area_home_background bg_black">
+        <div class="container">
+          <div class="head_home">
+            <h2 class="ttl">エンジニアを目指すあなたへ</h2>
+          </div>
+          <div class="body_home">
+            <div class="layout_2_div">
+              <div class="img">
+                <%= image_tag("message.png") %>
+              </div>
+              <div class="text_home">
+              <p class="ttl">作者からのメッセージ</p>
+              <p class="description">learning appは未経験からエンジニアを目指す方に向けたアプリです。同じ目標を持った仲間と共にエンジニアを目指しましょう！</p>
               </div>
             </div>
           </div>

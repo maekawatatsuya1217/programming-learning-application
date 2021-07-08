@@ -60,6 +60,15 @@ a {
   width: 200px;
 }
 
+.login_user_name{
+  color: white;
+  margin-left: 150px;
+}
+
+.fa-user{
+  color: rgb(6, 184, 255);
+}
+
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -500,6 +509,16 @@ input{
 
 .show__wrapper{
   text-align: center;
+}
+
+
+/* フッター */
+
+footer{
+  position: absolute;
+  bottom: 0;
+  position: fixed;
+  left: 550px;
 }
 
 /* タブレット対応 */
