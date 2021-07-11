@@ -113,6 +113,34 @@ Basic認証
 ![新規登録画面](https://raw.githubusercontent.com/maekawatatsuya1217/programming-learning-application/master/sign_up.png)
 
 ![ログイン画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/login.png?raw=true)
+
+![ブログ記事一覧画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_index.png?raw=true)
+
+![ブログ記事詳細画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_show.png?raw=true)
+
+![ブログ記事投稿画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_new.png?raw=true)
+
+![ブログ記事編集画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_edit.png?raw=true)
+
+![ブログ記事検索画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_search.png?raw=true)
+
+![コメント投稿画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/comment.png?raw=true)
+
+![カレンダー一覧画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_index.png?raw=true)
+
+![カレンダー詳細画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_show.png?raw=true)
+
+![カレンダー追加画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_new.png?raw=true)
+
+![カレンダー編集画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_edit.png?raw=true)
+
+![フォーム一覧画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_index.png?raw=true)
+
+![フォーム詳細画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_show.png?raw=true)
+
+![フォーム投稿画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_new.png?raw=true)
+
+![フォーム編集画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_edit.png?raw=true)
 # 工夫したポイント
 
 ①自分自身が実際にプログラミング学習を経験して、そこで必要だと感じたことなどをアプリに落とし込む事で
