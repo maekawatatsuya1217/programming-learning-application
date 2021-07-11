@@ -106,7 +106,10 @@ Basic認証
 使用目的にマッチしたユーザーが使用できるようにしました。
  またデザイン的に統一感を出すために黒、白、青を使用しアニメーションを実装することでjavascriptの技術向上を目指しました。
  (https://gyazo.com/06cfc35fbe1129550dc97cccd4b63879)
-
+ 
+ ## 新規登録
+ 
+![新規登録](https://raw.githubusercontent.com/maekawatatsuya1217/programming-learning-application/master/sign_up.png)
 # 工夫したポイント
 
 ①自分自身が実際にプログラミング学習を経験して、そこで必要だと感じたことなどをアプリに落とし込む事で
