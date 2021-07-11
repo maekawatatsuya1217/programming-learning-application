@@ -104,73 +104,133 @@ Basic認証
  [トップページ](https://i.gyazo.com/06cfc35fbe1129550dc97cccd4b63879.mp4)
  
  アプリケーションのトップページはまだこのアプリケーションを使用した経験が無い方も訪問されるページです。
- そのため、このアプリケーションの目的と機能、対象のユーザーを記載することによってこのアプリケーションの
-使用目的にマッチしたユーザーが使用できるようにしました。
+  
+ そのため、このアプリケーションの目的と機能、対象のユーザーを記載することによってこのアプリケーションの使用目的にマッチしたユーザーが使用できるようにしました。
+  
  またデザイン的に統一感を出すために黒、白、青を使用しアニメーションを実装することでjavascriptの技術向上を目指しました。
- 
- ## 新規登録
+  
+ 初期の状態ではユーザーがログインしているか判断しずらかったので判断しやすいようにアイコンを導入しました。 
+ ## 新規登録画面
  
 ![新規登録画面](https://raw.githubusercontent.com/maekawatatsuya1217/programming-learning-application/master/sign_up.png)
+ 
+ユーザーがプロフィール項目の入力で改行したいときや空白を含みたいときに、レイアウトが崩れないように「safe_join」を使用しました。
 
 ## ログイン画面
 
 ![ログイン画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/login.png?raw=true)
 
+ログイン画面でフッターが上部に上がってきてしまう現象が発生していたので、フッターをカブに固定し、常に最下部に存在するようにCSSを実装しました。
+
 ## ブログ記事一覧表示画面
 
 ![ブログ記事一覧画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_index.png?raw=true)
+
+ユーザーが新着の記事を確認する事ができるように、「order」を使用し並び順を変更する実装をしました。
+ 
+また投稿数が増加することによってん＋1問題が発生するので、未然に防止するために「include」を使用し実装をしました。この時にテキストだけでなく今まで経験したことの無かった画像に対するN±1問題の解消にも取り組みました。
+ 
+ユーザーが投稿する画像の大きさはそれぞれ違うと考えられるので、画像の大きさを一定にする記述を施し巻いた。またこの時に画像が崩れてしまわないようにする実装も一緒にしました。
 
 ## ブログ記事詳細画面
 
 ![ブログ記事詳細画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_show.png?raw=true)
 
+初期の状態では文章の量によって、文章の配置が崩れてしまう場合があったのでそれが崩れないように工夫をしました。
+ 
+また、ユーザー目線で必要な機能を考えたときに、前のページに遷移する事ができるボタンがあると便利になると考え、「戻る」ボタンの実装をしました。
+
 ## ブログ記事投稿画面
 
 ![ブログ記事投稿画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_new.png?raw=true)
+
+ユーザーが記事を投稿するときに、必ずログインしている必要があります。そのため投稿しようとしたユーザーがログイン状態では無い状態で投稿しようとしたときに強制的にログイン画面に遷移させるように実装をしました。
+ 
+入力項目にキャッチコピーを実装することによってユーザーがアピールしたい点を、他のユーザーに知らせることも可能にしました。また疑問を持っているユーザーはキャッチコピーを一覧ページから見ることによって、自分の課題を解決できそうな記事かを考え、それぞれのニーズにあった記事を見る事ができます。これによって記事のミスマッチが減らす事が可能だと考えました。
+
 
 ## ブログ記事編集画面
 
 ![ブログ記事編集画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_edit.png?raw=true)
 
+万が一、悪意のあるユーザーが他のユーザーの記事を編集しようとした際には、その行為ができないように実装をしました。これによってセキュリティを強化する事ができると考えました。
+ 
+また記事を書くのはこのアプリのペルソナであるプログラミング初心者の可能性が高いです。そのため記事を投稿した後に間違いに気づくということも多いかと考えました。そのときにすぐに記事を修正できるように編集機能を実装しました。
+
 ## ブログ記事検索画面
 
 ![ブログ記事検索画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/blog_search.png?raw=true)
+
+ユーザーが特定の記事を調べたいときに、関連する記事だけを見る事ができるように検索機能を実装しました。
+ 
+また記事が更新されてから時間が経つとバージョンの問題などが発生する事が考えられます。従って更新日が新しい記事を見る事ができるように表示順を変更しました。
+
+一覧表示画面と同じようにテキストと画像によるN＋１問題を解消するための実装をしました。
 
 ## コメント投稿画面
 
 ![コメント投稿画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/comment.png?raw=true)
 
+現代のアプリケーションの多くが非同期通信でコメントを実装しています。この仕組みによってユーザーがサービスを快適に使用できるようになっていると考え、非同期通信によって送信できるように実装しました。
+ 
+また現場で使用する頻度も高いと考えられるので、時間をかけて１つ１つの工程を理解しながら実装しました。
+
 ## カレンダー一覧画面
 
 ![カレンダー一覧画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_index.png?raw=true)
+
+カレンダーを導入するときの選定の基準はサービスを開発するときに、大切なユーザー目線での使用のしやすさを基準にしました。その結果最も機能がシンプルで扱いやすいシンプルカレンダーを採用することにしました。
+ 
+デフォルトの状態では日本時間の設定ではなかったので、日本時間で表示できるように設定をしました。
 
 ## カレンダー詳細画面
 
 ![カレンダー詳細画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_show.png?raw=true)
 
+ユーザーが使用する時のことを考えたときに、前のページに戻る事ができるようなボタンがあると便利だと考え、「戻る」ボタンを実装しました。
+
 ## カレンダー追加画面
 
 ![カレンダー追加画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_new.png?raw=true)
+
+ユーザーが詳細情報に長文を入力することも想定し、左右にスクロールすることによって入力に誤りがないかを確認する事ができるようにしました。
+ 
+また日時を選択する際には、プルダウンから選択するだけなので便利になっています。
 
 ## カレンダー編集画面
 
 ![カレンダー編集画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/calendar_edit.png?raw=true)
 
+予定を追加する時の画面と同じように日時を変更するときには、プルダウンから選択できるようにし、ユーザーが素早く予定を編集する事が可能です。
+
 ## フォーム一覧画面
 
 ![フォーム一覧画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_index.png?raw=true)
+
+ブログの一覧画面と同じようにN＋1問題を解消するための実装をしました。
+ 
+また最新の近日のフォームを振り返る事ができるようにするために並び順を変更しました。
 
 ## フォーム詳細画面
 
 ![フォーム詳細画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_show.png?raw=true)
 
+ユーザーが使用する時のことを考えたときに、前のページに戻る事ができるようなボタンがあると便利だと考え、「戻る」ボタンを実装しました。
+
 ## フォーム投稿画面
 
 ![フォーム投稿画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_new.png?raw=true)
 
+フォーム投稿時に日時をプルダウンから選択できるように実装することでユーザーが入力にかかる手間と時間を省く事ができると考えました。
+ 
+具体的な改善点を記載することによって、次の日からどのように改善をしていくのかを考える機会を提供し、より良い学習方針で学習を実施する事ができます。
+
 ## フォーム編集画面
 
 ![フォーム編集画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/form_edit.png?raw=true)
+
+投稿時と同じようにプルダウンから日時を選択する事ができるように実装しユーザーが入力にかかる手間と時間を減らす事ができるようにしました
+
 # 工夫したポイント
 
 ①自分自身が実際にプログラミング学習を経験して、そこで必要だと感じたことなどをアプリに落とし込む事で
