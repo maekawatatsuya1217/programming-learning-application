@@ -110,7 +110,9 @@ Basic認証
  
  ## 新規登録
  
-![新規登録](https://raw.githubusercontent.com/maekawatatsuya1217/programming-learning-application/master/sign_up.png)
+![新規登録画面](https://raw.githubusercontent.com/maekawatatsuya1217/programming-learning-application/master/sign_up.png)
+
+![ログイン画面](https://github.com/maekawatatsuya1217/programming-learning-application/blob/master/login.png?raw=true)
 # 工夫したポイント
 
 ①自分自身が実際にプログラミング学習を経験して、そこで必要だと感じたことなどをアプリに落とし込む事で
