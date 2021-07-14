@@ -411,6 +411,42 @@ input{
     color: #fff;
     background: rgb(6, 184, 255);
   }
+
+  .user__edit__child__back{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    text-align: center;
+    margin: 0px auto 40px;
+    font-size: 0.8em;
+    color: black;
+    background-color: lightgrey;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 3px;
+  }
+  .user__edit__child__back:hover{
+    color: #fff;
+    background: rgb(6, 184, 255);
+  }
+
+  .event__edit__child__back{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    text-align: center;
+    margin: 40px 685px 40px;
+    font-size: 0.8em;
+    color: black;
+    background-color: lightgrey;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 3px;
+  }
+  .user__edit__child__back:hover{
+    color: #fff;
+    background: rgb(6, 184, 255);
+  }
+
+
   .user__name{
     text-align: center;
   }

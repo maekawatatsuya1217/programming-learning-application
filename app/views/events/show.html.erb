@@ -8,7 +8,7 @@
 
       <%= link_to "編集", edit_event_path(@event.id), class: :calendar__btn %>
       <%= link_to "削除", event_path(@event.id), method: :delete, class: :calendar__btn %>
-      <%= link_to "戻る", events_path, class: :calendar__btn %>
+      <%= link_to "戻る", 'javascript:history.back()', class: :calendar__btn %>
 
       <table class="table">
         <tbody class="show__table">
