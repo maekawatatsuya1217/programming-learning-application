@@ -37,7 +37,7 @@ RSpec.describe User, type: :model do
      it 'passwordが空だと登録できない' do
        @user.password = ''
        @user.valid?
-       expect(@user.errors.full_messages).to include("パスワードを入力してください", "パスワードには英字と数字の両方を含めて設定してください")
+       expect(@user.errors.full_messages).to include("パスワードを入力してください", "パスワードには半角の英字と数字の両方を含めて設定してください")
      end
      it 'passwordが5文字以下であれば登録できない' do
        @user.password = '00000'
@@ -53,17 +53,17 @@ RSpec.describe User, type: :model do
      it 'パスワードは、半角英数字混合での入力が必須であること' do
         @user.password = 'aaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードには英字と数字の両方を含めて設定してください')
+        expect(@user.errors.full_messages).to include('パスワードには半角の英字と数字の両方を含めて設定してください')
       end
       it 'passwordは数字のみでは登録できないこと' do
         @user.password = '111111'
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードには英字と数字の両方を含めて設定してください')
+        expect(@user.errors.full_messages).to include('パスワードには半角の英字と数字の両方を含めて設定してください')
       end
       it 'passwordは全角では登録できない' do
         @user.password = 'ccc１１１'
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードは不正な値です')
+        expect(@user.errors.full_messages).to include('パスワードには半角の英字と数字の両方を含めて設定してください')
       end
       it 'profileが空では登録できない' do
         @user.profile = ''
