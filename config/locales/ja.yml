@@ -10,6 +10,7 @@ ja:
         title: タイトル
         catch: キャッチコピー
         article: 記事
+        category_id: カテゴリー
         image: 画像
       form:
         day: 学習日
