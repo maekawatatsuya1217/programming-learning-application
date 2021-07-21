@@ -5,8 +5,11 @@
       <p class="blog__hedding">
         <%= @blog.title %>
       </p>
-
-      <%= link_to @blog.user.name, user_path(@blog.user.id), class: :blog__user %>
+      
+      <div class="blog_user_category">
+        <%= link_to @blog.user.name, user_path(@blog.user.id), class: :blog__user %>
+        <div class="blog_category"><%= "＃#{@blog.category.name}"%></div>
+      </div>
 
       <% if user_signed_in? && current_user.id == @blog.user_id %>
         <div class="blog__manage">

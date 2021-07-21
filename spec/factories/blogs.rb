@@ -3,6 +3,7 @@ FactoryBot.define do
       title   {'HTMLについて'}
       catch   {'1分でわかります'}
       article {'プログラミング言語です！'}
+      category_id { 2 }
 
       association :user
 

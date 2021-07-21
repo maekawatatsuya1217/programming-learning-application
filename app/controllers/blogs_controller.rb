@@ -51,7 +51,7 @@ class BlogsController < ApplicationController
     private
 
     def blog_params
-        params.require(:blog).permit(:title, :catch, :article, :image).merge(user_id: current_user.id)
+        params.require(:blog).permit(:title, :catch, :article, :image, :category_id).merge(user_id: current_user.id)
     end
 
     def blog_build

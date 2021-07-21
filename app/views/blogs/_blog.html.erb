@@ -5,6 +5,9 @@
     <p class="card__summary">
       <%= blog.catch %>
     </p>
-    <%= link_to blog.user.name, user_path(blog.user.id), class: :card__user %>
+    <div class="card_bottom_area">
+      <%= link_to blog.user.name, user_path(blog.user.id), class: :card__user %>
+      <%= "＃#{blog.category.name}" %>
+    </div>
   </div>
 </div>

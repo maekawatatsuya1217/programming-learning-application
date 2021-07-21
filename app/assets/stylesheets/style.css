@@ -222,6 +222,13 @@ input{
   padding: 0 5px;
 }
 
+/* カテゴリー */
+
+.select-box{
+  height: 30px;
+  width: 400px;
+}
+
 /* メイン */
 
 .greeting{
@@ -250,6 +257,13 @@ input{
   border-radius: 3px;
 }
 
+.signout_search-input{
+  width: 150px;
+  margin-left: 410px;
+}
+.search-input-now{
+  width: 150px;
+}
 .search-form .search-input {
   width: 150px;
   margin-left: 100px;
@@ -260,6 +274,17 @@ input{
 .search-function{
   text-align: center;
   margin-bottom: 40px;
+}
+
+.no_result_text{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.think_img{
+  margin: 0px 0 60px 312px;
+  height: 250px;
+  width: 400px;
 }
 
 .page-heading {
@@ -301,6 +326,15 @@ input{
   text-decoration: underline;
 }
 
+.card_bottom_area{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  color: #999999;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 /* 詳細ページ */
 
 .blog__wrapper{
@@ -313,6 +347,12 @@ input{
   text-align: center;
 }
 
+.blog_user_category{
+  padding: 0 410px 0 410px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .blog__user{
   display: block;
   font-size: 16px;
@@ -320,6 +360,12 @@ input{
   margin: 10px 0 5px 0;
   text-align: center;
   text-decoration: underline;
+}
+
+.blog_category{
+  color: #999999;
+  text-align: center;
+  margin: 10px 0 5px 0;
 }
 
 .blog__image{
