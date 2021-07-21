@@ -308,6 +308,15 @@ input{
   text-decoration: underline;
 }
 
+.card_bottom_area{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  color: #999999;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 /* 詳細ページ */
 
 .blog__wrapper{
