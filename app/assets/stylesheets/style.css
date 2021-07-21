@@ -222,6 +222,13 @@ input{
   padding: 0 5px;
 }
 
+/* カテゴリー */
+
+.select-box{
+  height: 30px;
+  width: 400px;
+}
+
 /* メイン */
 
 .greeting{
